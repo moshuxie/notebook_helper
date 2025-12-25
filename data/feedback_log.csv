@@ -1,0 +1,33 @@
+text,timestamp
+"Traceback (most recent call last):
+  File ""/Users/mikexie/google-cloud-sdk/lib/gcloud.py"", line 104, in <module>
+    main()
+  File ""/Users/mikexie/google-cloud-sdk/lib/gcloud.py"", line 62, in main
+    from googlecloudsdk.core.util import encoding
+  File ""/Users/mikexie/google-cloud-sdk/lib/googlecloudsdk/__init__.py"", line 23, in <module>
+    from googlecloudsdk.core.util import importing
+  File ""/Users/mikexie/google-cloud-sdk/lib/googlecloudsdk/core/util/importing.py"", line 23, in <module>
+    import imp
+ModuleNotFoundError: No module named 'imp'",2025-12-15 01:08:41.503239
+---------------------------------------------------------------------------,,2025-12-15 01:32:16.996453
+NameError                                 Traceback (most recent call last),,2025-12-15 01:32:16.996453
+"Cell In[218], line 1",,2025-12-15 01:32:16.996453
+----> 1 print(ab),,2025-12-15 01:32:16.996453
+NameError: name 'ab' is not defined,,2025-12-15 01:32:16.996453
+TypeError                                 Traceback (most recent call last),,Python,2025-12-16 03:03:53.940601
+"Cell In[20], line 8",,Python,2025-12-16 03:03:53.940601
+6 abc = 1,,Python,2025-12-16 03:03:53.940601
+7 print(f'variable abc = {ab} is to be used ------'),,Python,2025-12-16 03:03:53.940601
+----> 8 print(test1(ab)),,Python,2025-12-16 03:03:53.940601
+"Cell In[20], line 4, in test1(x)",,Python,2025-12-16 03:03:53.940601
+3 def test1(x):,,Python,2025-12-16 03:03:53.940601
+----> 4     return test(x) + 1,,Python,2025-12-16 03:03:53.940601
+"Cell In[20], line 2, in test(x)",,Python,2025-12-16 03:03:53.940601
+1 def test(x: int):,,Python,2025-12-16 03:03:53.940601
+----> 2     return x + 1,,Python,2025-12-16 03:03:53.940601
+"TypeError: can only concatenate str (not ""int"") to str",,Python,2025-12-16 03:03:53.940601
+---------------------------------------------------------------------------,,Python,2025-12-16 03:09:04.337957
+NameError                                 Traceback (most recent call last),,Python,2025-12-16 03:09:04.337957
+"Cell In[19], line 1",,Python,2025-12-16 03:09:04.337957
+----> 1 print(aab),,Python,2025-12-16 03:09:04.337957
+NameError: name 'aab' is not defined,,Python,2025-12-16 03:09:04.337957

@@ -1,0 +1,25 @@
+app_name: "CodeLogInsight MVP"
+data_path: "data/feedback_log.csv"
+model_path: "models/hybrid_model.pkl"
+
+# 规则库：用于Rule-based优先匹配
+patterns:
+  # 匹配 Python Traceback 里的文件路径行
+  stack_trace: 'File\s+"(.*?)",\s+line\s+(\d+),\s+in\s+(.*)'
+  # 匹配 常见的 Python Warning (如你提供的案例)
+  warning_format: '^(.*?):(\d+):\s+(\w+Warning):\s+(.*)'
+  # 识别第三方库的关键词
+  library_keywords:
+    - "site-packages"
+    - "dist-packages"
+    - "venv"
+    - "anaconda"
+    - "/lib/python"
+    - "gems" # Ruby
+    - "node_modules" # JS
+
+# 机器学习分类标签
+labels:
+  0: "USER_CODE"    # 用户写的逻辑
+  1: "LIB_CODE"     # 调用的包代码
+  2: "ERROR_LOG"    # 报错信息/堆栈/警告

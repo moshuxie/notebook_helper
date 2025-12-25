@@ -1,0 +1,58 @@
+text,category,solution,is_devops
+"gcloud auth login error 403 forbidden",AUTH_ISSUE,"Run 'gcloud auth login' in the terminal.",1
+"connection refused by host port 22",NETWORK_ERROR,"Check your VPN connection or firewall settings.",1
+"user does not have permission to access project",AUTH_ISSUE,"Request IAM permissions for this project.",1
+"pip install kubectl error no matching distribution",PIP_ERROR,"This tool cannot be installed via pip. Ask DevOps to install it.",1
+"cuda out of memory",RESOURCE_ERROR,"Your GPU is full. Try reducing batch size.",1
+"disk quota exceeded",RESOURCE_ERROR,"Clean up old files or request more storage.",1
+"syntax error unexpected indent",SYNTAX_ERROR,"Check your indentation.",0
+"division by zero",LOGIC_ERROR,"Check your math logic.",0
+"list index out of range",LOGIC_ERROR,"You are trying to access an item that doesn't exist in the list.",0
+"file not found in directory",DATA_ERROR,"Check if the file path is correct.",0
+"ModuleNotFoundError No module named",MISSING_LIBRARY,"Run '!pip install <package>'.",0
+"No module named 'pandas'",MISSING_LIBRARY,"Run '!pip install <package>'.",0
+"No module named 'tensorflow'",MISSING_LIBRARY,"Run '!pip install <package>'.",0
+"No module named 'scala'",MISSING_LIBRARY,"Run '!pip install <package>'.",0
+"ImportError cannot import name",MISSING_LIBRARY,"Run '!pip install <package>'.",0
+"ERROR: Could not find a version that satisfies the requirement",PACKAGE_NOT_FOUND,"Package missing from Nexus. Ask DevOps to append it.",1
+"No matching distribution found for",PACKAGE_NOT_FOUND,"Package missing from Nexus. Ask DevOps to append it.",1
+"memcache.go couldn't get current server API group list dial tcp connection refused",K8S_NETWORK,"The local Kubernetes proxy is unreachable. Check if 'kubectl proxy' is running or if the host/port is correct.",1
+"The connection to the server was refused did you specify the right host or port",K8S_NETWORK,"The Kubernetes API server is unreachable. Check your kubeconfig or VPN.",1
+"Access Denied: BigQuery BigQuery: Permission denied while writing data",GCP_IAM_ERROR,"You do not have write access to this BQ dataset. Request IAM roles.",1
+"Not found: Table",GCP_DATA_ERROR,"The BigQuery table does not exist. Check project.dataset.table spelling.",0
+"Resources exceeded during query execution: The query could not be executed in the allotted memory",GCP_RESOURCE_ERROR,"Your SQL query is too heavy. Try filtering data or using partitions.",0
+"403 Forbidden GET https://storage.googleapis.com",GCP_IAM_ERROR,"You do not have permission to access this GCS Bucket.",1
+"404 Not Found GET https://storage.googleapis.com",GCP_DATA_ERROR,"The GCS Bucket or Object path does not exist.",0
+"Service Unavailable: 503",GCP_SERVICE_ERROR,"GCP Service is temporarily down. Try again later.",1
+"AnalysisException: cannot resolve given input columns",SPARK_CODE_ERROR,"Column name mismatch in PySpark df. Check your schema.",0
+"Py4JJavaError: An error occurred while calling",SPARK_JAVA_ERROR,"Underlying Java/Scala error in Spark. Check log trace for details.",0
+"ExecutorLostFailure: Executor Heartbeat timed out",SPARK_RESOURCE_ERROR,"Spark Executor died due to OOM or network issues. Request more memory.",1
+"java.lang.OutOfMemoryError: Java heap space",SPARK_RESOURCE_ERROR,"Driver or Executor OOM. Increase spark.driver.memory.",1
+"BroadcastTimeout: Timeout waiting for broadcast",SPARK_CONFIG_ERROR,"Data is too big for broadcast join. Increase 'spark.sql.broadcastTimeout'.",1
+"org.apache.spark.shuffle.FetchFailedException",SPARK_SHUFFLE_ERROR,"Shuffle fetch failed. Often network or OOM related.",1
+"CrashLoopBackOff",K8S_POD_ERROR,"Pod is crashing repeatedly. Check application logs.",1
+"ImagePullBackOff",K8S_IMAGE_ERROR,"Cannot pull image. Check registry credentials or image name.",1
+"ErrImagePull",K8S_IMAGE_ERROR,"Cannot pull image. Check registry credentials or image name.",1
+"context deadline exceeded",K8S_TIMEOUT,"The API request timed out. The cluster might be slow or unreachable.",1
+"upstream connect error or disconnect/reset before headers",K8S_INGRESS_ERROR,"Ingress/Service Mesh issue. Application is not reachable.",1
+"Cannot connect to the Docker daemon at unix:///var/run/docker.sock",DOCKER_DAEMON_ERROR,"Docker daemon is not running. Start Docker.",1
+"manifest for latest not found",DOCKER_IMAGE_ERROR,"The tag 'latest' does not exist for this image.",0
+"bind: address already in use",NETWORK_PORT_ERROR,"The port is already taken by another process.",1
+"relation does not exist",SQL_SYNTAX_ERROR,"The table does not exist in the database.",0
+"column does not exist",SQL_SYNTAX_ERROR,"The column name is wrong.",0
+"syntax error at or near",SQL_SYNTAX_ERROR,"SQL Syntax error. Check commas and keywords.",0
+"FATAL: password authentication failed for user",DB_AUTH_ERROR,"Wrong database password or username.",1
+"NullPointerException",JAVA_CODE_ERROR,"Code attempted to use an object reference that was null.",0
+"ClassNotFoundException",JAVA_CONFIG_ERROR,"Java Classpath issue. Missing jar file.",1
+"command not found",SHELL_CMD_ERROR,"The system cannot find this command. Check PATH or spelling.",0
+"Permission denied",SHELL_PERM_ERROR,"You do not have file system permissions to run this.",1
+"IndentationError: unexpected indent",PYTHON_SYNTAX_ERROR,"Fix your indentation (tabs vs spaces).",0
+"KeyError",PYTHON_CODE_ERROR,"Dictionary key not found.",0
+"TypeError: object is not subscriptable",PYTHON_CODE_ERROR,"You are trying to access an object like a list/dict but it isn't one.",0
+"ValueError: invalid literal for int()",PYTHON_CODE_ERROR,"Cannot convert string to number.",0
+"name 'df' is not defined",VARIABLE_ERROR,"Variable not found. Check if you ran the cell defining it.",0
+"name 'x' is not defined",VARIABLE_ERROR,"Variable not found. Check if you ran the cell defining it.",0
+"name 'data' is not defined",VARIABLE_ERROR,"Variable not found. Check if you ran the cell defining it.",0
+"name 'model' is not defined",VARIABLE_ERROR,"Variable not found. Check if you ran the cell defining it.",0
+"NameError: name is not defined",VARIABLE_ERROR,"Variable not found. Check if you ran the cell defining it.",0
+"variable not defined",VARIABLE_ERROR,"Variable not found. Check if you ran the cell defining it.",0
